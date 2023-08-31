@@ -68,7 +68,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 210000;
+        consensus.nSubsidyHalvingInterval = 525600;
         consensus.nBIP34Enabled = true;
         consensus.nBIP65Enabled = true;
         consensus.nBIP66Enabled = true;
@@ -76,7 +76,7 @@ public:
         consensus.nCSVEnabled = true;
         consensus.powLimit = uint256S("000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
-        consensus.nPowTargetSpacing = 10 * 60;
+        consensus.nPowTargetSpacing = 60;
 	consensus.lwmaAveragingWindow = 45;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
@@ -88,7 +88,7 @@ public:
 
         // The best chain should have at least this much work.
         //consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000010f4207fc56b");
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000001");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
@@ -102,7 +102,7 @@ public:
         pchMessageStart[1] = 0xbf;
         pchMessageStart[2] = 0xb5;
         pchMessageStart[3] = 0xda;
-        nDefaultPort = 8335;
+        nDefaultPort = 6211;
         nPruneAfterHeight = 100000;
 
         genesis = CreateGenesisBlock(1540053565, 10226705, 0x1d00ffff, 4, 50 * COIN);
@@ -118,7 +118,7 @@ public:
         // release ASAP to avoid it where possible.
 	    
 	// String 'rem-' is added to set it to be invalid. Need to update this when there is a new seed.
-        vSeeds.emplace_back("dnsseed.bsha3.us"); // Supports x1, x5, x9, and xd
+        vSeeds.emplace_back("dnsseed.redblockcoin.com"); // Supports x1, x5, x9, and xd
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,83);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,88);
@@ -126,7 +126,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
-        bech32_hrp = "bsha3";
+        bech32_hrp = "rb";
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
@@ -137,21 +137,21 @@ public:
 
         checkpointData = {
             {
-                { 1, uint256S("0x00000000230768841f81a8b14b3899ce6b38c0e0e9d8f3a60245cf79c8bc756a")},
-                { 175, uint256S("0x000000004571ee39c82eb143f15577808de9fbfd7f103e6f77d27c6855538aca")},
-                { 176, uint256S("0x000000001adcdf818192b26b9ae9a3506e864f6669ed28fa7e509e2258a0b68c")},
-                { 250, uint256S("0x000000003790c7a9797e9c7d4c6791b9b5051c250e6d5e0b7745f483eb65c4a3")},
-                { 1000, uint256S("0x0000000052707bd216d8c74f4ad773529d063b2f6bcae6f0f9a6dc120647a330")},
-                { 4000, uint256S("0x000000009697e163b20b9d5675d538f2f046972919f804e5c8130479ef6b19a3")},
-                { 20418, uint256S("0x00000000000048fc1a336fa6c0fbf1c9dac5ea7b76c529438a7360b0da92d63b")},
+            //    { 1, uint256S("0x00000000230768841f81a8b14b3899ce6b38c0e0e9d8f3a60245cf79c8bc756a")},
+            //    { 175, uint256S("0x000000004571ee39c82eb143f15577808de9fbfd7f103e6f77d27c6855538aca")},
+            //    { 176, uint256S("0x000000001adcdf818192b26b9ae9a3506e864f6669ed28fa7e509e2258a0b68c")},
+            //    { 250, uint256S("0x000000003790c7a9797e9c7d4c6791b9b5051c250e6d5e0b7745f483eb65c4a3")},
+            //    { 1000, uint256S("0x0000000052707bd216d8c74f4ad773529d063b2f6bcae6f0f9a6dc120647a330")},
+            //    { 4000, uint256S("0x000000009697e163b20b9d5675d538f2f046972919f804e5c8130479ef6b19a3")},
+            //    { 20418, uint256S("0x00000000000048fc1a336fa6c0fbf1c9dac5ea7b76c529438a7360b0da92d63b")},
             }
         };
 
         chainTxData = ChainTxData {
             // Data from rpc: getchaintxstats 4096
-            /* nTime    */ 1541760671,
-            /* nTxCount */ 8532,
-            /* dTxRate  */ 0.00714,
+            /* nTime    */ 1540053565,
+            /* nTxCount */ 0,
+            /* dTxRate  */ 0.00,
         };
 
         /* disable fallback fee on mainnet */
@@ -166,7 +166,7 @@ class CTestNetParams : public CChainParams {
 public:
     CTestNetParams() {
         strNetworkID = "test";
-        consensus.nSubsidyHalvingInterval = 210000;
+        consensus.nSubsidyHalvingInterval = 525600;
         consensus.nBIP34Enabled = true;
         consensus.nBIP65Enabled = true;
         consensus.nBIP66Enabled = true;
@@ -174,7 +174,7 @@ public:
         consensus.nCSVEnabled = true;
         consensus.powLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 14 * 24 * 6 * 6; // two weeks // (60)
-        consensus.nPowTargetSpacing = 1 * 6; // (10)
+        consensus.nPowTargetSpacing = 60; // (10)
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1512; // 75% for testchains
@@ -196,7 +196,7 @@ public:
         pchMessageStart[1] = 0x11;
         pchMessageStart[2] = 0x09;
         pchMessageStart[3] = 0x07;
-        nDefaultPort = 18335;
+        nDefaultPort = 17335;
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1540053565, 14564263, /*i,*/ 0x1e00ffff, 1, 50 * COIN); // TODO
@@ -278,7 +278,7 @@ public:
         pchMessageStart[1] = 0xbf;
         pchMessageStart[2] = 0xb5;
         pchMessageStart[3] = 0xda;
-        nDefaultPort = 18444;
+        nDefaultPort = 17444;
         nPruneAfterHeight = 1000;
 
         //UpdateVersionBitsParametersFromArgs(args);
