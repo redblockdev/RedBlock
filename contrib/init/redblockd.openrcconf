@@ -1,0 +1,33 @@
+# /etc/conf.d/redblockd: config file for /etc/init.d/redblockd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/redblock/redblock.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/redblockd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/redblockd.pid"
+
+# Where to write redblockd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/redblockd"
+
+# User and group to own redblockd process
+#BITCOIND_USER="redblock"
+#BITCOIND_GROUP="redblock"
+
+# Path to redblockd executable
+#BITCOIND_BIN="/usr/bin/redblockd"
+
+# Nice value to run redblockd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BITCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for redblockd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOIND_SIGTERM_TIMEOUT=60

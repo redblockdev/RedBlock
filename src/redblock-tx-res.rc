@@ -17,13 +17,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "REDB"
-            VALUE "FileDescription",    "bsha3-tx (CLI REDB transaction editor utility)"
+            VALUE "FileDescription",    "redblock-tx (CLI REDB transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "bsha3-tx"
+            VALUE "InternalName",       "redblock-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "bsha3-tx.exe"
-            VALUE "ProductName",        "bsha3-tx"
+            VALUE "OriginalFilename",   "redblock-tx.exe"
+            VALUE "ProductName",        "redblock-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

@@ -231,8 +231,8 @@ bool Intro::pickDataDirectory(interfaces::Node& node)
         settings.setValue("fReset", false);
     }
     /* Only override -datadir if different from the default, to make it possible to
-     * override -datadir in the bitcoin.conf file in the default data directory
-     * (to be consistent with bsha3d behavior)
+     * override -datadir in the redblock.conf file in the default data directory
+     * (to be consistent with redblockd behavior)
      */
     if(dataDir != getDefaultDataDirectory()) {
         node.softSetArg("-datadir", GUIUtil::qstringToBoostPath(dataDir).string()); // use OS locale for path setting

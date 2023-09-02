@@ -1,13 +1,13 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: REDB
-Upstream-Contact: REDB Developers
-Source: https://github.com/bsha3/bsha3
+Upstream-Name: RedBlock
+Upstream-Contact: RedBlock Developers
+Source: https://github.com/redblockdev/redblock
 
 Files: *
-Copyright: 2018, REDB and Bitcoin Developers
+Copyright: 2023, RedBlock and Bitcoin Developers
 License: Expat
-Comment: REDB Developers encompasses the current developers listed on bsha3.org,
-         as well as the numerous contributors to the Bitcoin and REDB projects.
+Comment: RedBlock Developers encompasses the current developers listed on redblock.org,
+         as well as the numerous contributors to the Bitcoin and RedBlock projects.
 
 Files: debian/*
 Copyright: 2010-2011, Jonas Smedegaard <dr@jones.dk>

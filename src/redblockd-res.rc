@@ -17,13 +17,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "REDB"
-            VALUE "FileDescription",    "bsha3-cli (JSON-RPC client for " PACKAGE_NAME ")"
+            VALUE "FileDescription",    "redblockd (REDB node with a JSON-RPC server)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "bsha3-cli"
+            VALUE "InternalName",       "redblockd"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "bsha3-cli.exe"
-            VALUE "ProductName",        "bsha3-cli"
+            VALUE "OriginalFilename",   "redblockd.exe"
+            VALUE "ProductName",        "redblockd"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

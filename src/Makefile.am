@@ -27,7 +27,7 @@ BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 LIBBITCOIN_SERVER=libbitcoin_server.a
 LIBBITCOIN_COMMON=libbitcoin_common.a
 LIBBITCOIN_CONSENSUS=libbitcoin_consensus.a
-LIBBITCOIN_CLI=libbsha3_cli.a
+LIBBITCOIN_CLI=libredblock_cli.a
 LIBBITCOIN_UTIL=libbitcoin_util.a
 LIBBITCOIN_CRYPTO_BASE=crypto/libbitcoin_crypto_base.a
 LIBBITCOINQT=qt/libbitcoinqt.a
@@ -80,14 +80,14 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += bsha3d
+  bin_PROGRAMS += redblockd
 endif
 
 if BUILD_BITCOIN_CLI
-  bin_PROGRAMS += bsha3-cli
+  bin_PROGRAMS += redblock-cli
 endif
 if BUILD_BITCOIN_TX
-  bin_PROGRAMS += bsha3-tx
+  bin_PROGRAMS += redblock-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -216,7 +216,7 @@ obj/build.h: FORCE
 	  "$(abs_top_srcdir)"
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between bsha3d and bsha3-qt
+# server: shared between redblockd and redblock-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -281,7 +281,7 @@ libbitcoin_zmq_a_SOURCES = \
 endif
 
 
-# wallet: shared between bsha3d and bsha3-qt, but only linked
+# wallet: shared between redblockd and redblock-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -400,7 +400,7 @@ libbitcoin_consensus_a_SOURCES = \
   utilstrencodings.h \
   version.h
 
-# common: shared between bsha3d, and bsha3-qt and non-server tools
+# common: shared between redblockd, and redblock-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -457,27 +457,27 @@ libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 AM_LDFLAGS += $(COMPAT_LDFLAGS)
 endif
 
-# cli: shared between bsha3-cli and bsha3-qt
-libbsha3_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbsha3_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbsha3_cli_a_SOURCES = \
+# cli: shared between redblock-cli and redblock-qt
+libredblock_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libredblock_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libredblock_cli_a_SOURCES = \
   rpc/client.cpp \
   $(BITCOIN_CORE_H)
 
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# bsha3d binary #
-bsha3d_SOURCES = bsha3d.cpp
-bsha3d_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-bsha3d_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bsha3d_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# redblockd binary #
+redblockd_SOURCES = redblockd.cpp
+redblockd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+redblockd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+redblockd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-bsha3d_SOURCES += bsha3d-res.rc
+redblockd_SOURCES += redblockd-res.rc
 endif
 
-bsha3d_LDADD = \
+redblockd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_WALLET) \
   $(LIBBITCOIN_COMMON) \
@@ -491,38 +491,38 @@ bsha3d_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-bsha3d_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+redblockd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# bsha3-cli binary #
-bsha3_cli_SOURCES = bsha3-cli.cpp
-bsha3_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-bsha3_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bsha3_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# redblock-cli binary #
+redblock_cli_SOURCES = redblock-cli.cpp
+redblock_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+redblock_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+redblock_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-bsha3_cli_SOURCES += bsha3-cli-res.rc
+redblock_cli_SOURCES += redblock-cli-res.rc
 endif
 
-bsha3_cli_LDADD = \
+redblock_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-bsha3_cli_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+redblock_cli_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# bsha3-tx binary #
-bsha3_tx_SOURCES = bsha3-tx.cpp
-bsha3_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-bsha3_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bsha3_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# redblock-tx binary #
+redblock_tx_SOURCES = redblock-tx.cpp
+redblock_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+redblock_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+redblock_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-bsha3_tx_SOURCES += bsha3-tx-res.rc
+redblock_tx_SOURCES += redblock-tx-res.rc
 endif
 
-bsha3_tx_LDADD = \
+redblock_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -530,7 +530,7 @@ bsha3_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-bsha3_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+redblock_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #

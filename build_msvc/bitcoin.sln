@@ -6,7 +6,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libbitcoin_consensus", "lib
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_libbitcoinconsensus", "testconsensus\testconsensus.vcxproj", "{E78473E9-B850-456C-9120-276301E04C06}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bsha3d", "bsha3d\bsha3d.vcxproj", "{D4513DDF-6013-44DC-ADCC-12EAF6D1F038}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "redblockd", "redblockd\redblockd.vcxproj", "{D4513DDF-6013-44DC-ADCC-12EAF6D1F038}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libbitcoin_util", "libbitcoin_util\libbitcoin_util.vcxproj", "{B53A5535-EE9D-4C6F-9A26-F79EE3BC3754}"
 EndProject
@@ -24,13 +24,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libbitcoin_zmq", "libbitcoi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_bitcoin", "test_bitcoin\test_bitcoin.vcxproj", "{A56B73DB-D46D-4882-8374-1FE3FFA08F07}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libbsha3_cli", "libbsha3_cli\libbsha3_cli.vcxproj", "{0667528C-D734-4009-ADF9-C0D6C4A5A5A6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libredblock_cli", "libredblock_cli\libredblock_cli.vcxproj", "{0667528C-D734-4009-ADF9-C0D6C4A5A5A6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bsha3-cli", "bsha3-cli\bsha3-cli.vcxproj", "{0B2D7431-F876-4A58-87BF-F748338CD3BF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "redblock-cli", "redblock-cli\redblock-cli.vcxproj", "{0B2D7431-F876-4A58-87BF-F748338CD3BF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bench_bitcoin", "bench_bitcoin\bench_bitcoin.vcxproj", "{1125654E-E1B2-4431-8B5C-62EA9A2FEECB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bsha3-tx", "bsha3-tx\bsha3-tx.vcxproj", "{D3022AF6-AD33-4CE3-B358-87CB6A1B29CF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "redblock-tx", "redblock-tx\redblock-tx.vcxproj", "{D3022AF6-AD33-4CE3-B358-87CB6A1B29CF}"
 EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution

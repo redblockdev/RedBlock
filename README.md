@@ -4,9 +4,9 @@
 REDB
 =====================================
 
-https://bsha3.com
+https://redblock.com
 
-[View Releases](https://github.com/bsha3/bsha3/releases)
+[View Releases](https://github.com/redblock/redblock/releases)
 
 What is REDB?
 ---------------
@@ -41,7 +41,7 @@ information or see https://opensource.org/licenses/MIT.
 Building
 --------
 
-Download either the source code, or a [pre-built release](https://github.com/bsha3/bsha3/releases).
+Download either the source code, or a [pre-built release](https://github.com/redblock/redblock/releases).
 
 To build from source, run:
 
@@ -55,10 +55,10 @@ The resulting binaries will be created in `src/`, with the GUI wallet in subdire
 
 **Components -**
 
-- `bsha3d` - Daemon (Syncs and validates blocks and transactions)
-- `bsha3-cli` - RPC Client (Runs commands on the daemon) 
-- `bsha3-tx` - Transaction Builder
-- `bsha3-qt` - GUI Wallet (Standalone, can be used for mining and sending)
+- `redblockd` - Daemon (Syncs and validates blocks and transactions)
+- `redblock-cli` - RPC Client (Runs commands on the daemon) 
+- `redblock-tx` - Transaction Builder
+- `redblock-qt` - GUI Wallet (Standalone, can be used for mining and sending)
 
 Running
 -------
@@ -69,9 +69,9 @@ To start, double-click the program. To stop, close the program.
 
 **CLI (Command Line Interface) -**
 
-To start, run `./bsha3d` in a terminal window. Then run `./bsha3-cli getblockchaininfo` in another. You should see the block height and other output. Run `./bsha3-cli help` for more commands.
+To start, run `./redblockd` in a terminal window. Then run `./redblock-cli getblockchaininfo` in another. You should see the block height and other output. Run `./redblock-cli help` for more commands.
 
-To stop `bsha3d` cleanly, you should run `./bsha3-cli stop`.
+To stop `redblockd` cleanly, you should run `./redblock-cli stop`.
 
 Mining
 ------
@@ -86,22 +86,22 @@ To stop, run command - `setgenerate false`
 
 **CLI -**
 
-To start, first run - `./bsha3d`
+To start, first run - `./redblockd`
 
-Then, in a separate terminal, run - `./bsha3-cli setgenerate true <num_cpu_cores>`
+Then, in a separate terminal, run - `./redblock-cli setgenerate true <num_cpu_cores>`
 
 You are now mining.
 
-To stop mining, run - `./bsha3-cli setgenerate false`
+To stop mining, run - `./redblock-cli setgenerate false`
 
-To stop `bsha3d` cleanly, run - `./bsha3-cli stop`
+To stop `redblockd` cleanly, run - `./redblock-cli stop`
 
 Wallet Backup
 -------------
 
 Create a wallet backup right away. There are two ways to do this:
 
-- Use `bsha3-cli dumpwallet <output_filename>` to create a txt file containing your `xprv` (master private key) and its addresses. From this `xprv`, you can generate all private keys & addresses that your wallet file will ever contain.
+- Use `redblock-cli dumpwallet <output_filename>` to create a txt file containing your `xprv` (master private key) and its addresses. From this `xprv`, you can generate all private keys & addresses that your wallet file will ever contain.
 
 - Copy `$DATADIR/wallets/wallet.dat` to a safe destination.
 
@@ -110,7 +110,7 @@ Your datadir is in the following folder for each operating system:
 - Windows 10 - `C:\Documents and Settings\<username>\Application Data\REDB`
 - Windows 7 - `C:\Users\<username>\AppData\Roaming\REDB`
 - Mac - `~/Library/Application Support/REDB`
-- Unix - `~/.bsha3`
+- Unix - `~/.redblock`
 
 Development Process
 -------------------

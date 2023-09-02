@@ -2,7 +2,7 @@
 
 General bitcoin questions and/or support requests are best directed to the Bitcoin StackExchange at https://bitcoin.stackexchange.com.
 
-For reporting security issues, please read instructions at https://bitcoincore.org/en/contact/, and email bsha3official@gmail.com.
+For reporting security issues, please read instructions at https://bitcoincore.org/en/contact/, and email redblockofficial@gmail.com.
 
 If the node is "stuck" during sync or giving "block checksum mismatch" errors, please ensure your hardware is stable by running memtest and observe CPU temperature with a load-test tool such as linpack before creating an issue! -->
 

@@ -498,7 +498,7 @@ void static REDBMiner(const CChainParams& chainparams)
 {
     LogPrintf("REDB Miner -- started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("bsha3-miner");
+    RenameThread("redblock-miner");
 
     unsigned int nExtraNonce = 0;
 

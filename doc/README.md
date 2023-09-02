@@ -5,7 +5,7 @@ Setup
 ---------------------
 REDB is the name of both the original REDB client, and the peer-to-peer protocol / network it validates. It downloads and, by default, stores the entire history of REDB transactions, which requires about 2.8mb as of Nov 8, 2018. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few moments to a day or more.
 
-Download REDB from either [bsha3.org](https://bsha3.org/releases/) or [GitHub](https://github.com/bsha3/bsha3).
+Download REDB from either [redblock.org](https://redblock.org/releases/) or [GitHub](https://github.com/redblock/redblock).
 
 
 Running
@@ -16,12 +16,12 @@ The following are some helpful notes on how to run REDB on your native platform.
 
 Unpack the files into a directory and run:
 
-- `bin/bsha3-qt` (GUI) or
-- `bin/bsha3d` (headless)
+- `bin/redblock-qt` (GUI) or
+- `bin/redblockd` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run bsha3-qt.exe.
+Unpack the files into a directory, and then run redblock-qt.exe.
 
 ### macOS
 
@@ -73,7 +73,7 @@ The REDB repo's [root README](/README.md) contains relevant information on the d
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
-- [REDB's bitcoin.conf Configuration File](bitcoin-conf.md)
+- [REDB's redblock.conf Configuration File](bitcoin-conf.md)
 - [Files](files.md)
 - [Fuzz-testing](fuzzing.md)
 - [Reduce Traffic](reduce-traffic.md)

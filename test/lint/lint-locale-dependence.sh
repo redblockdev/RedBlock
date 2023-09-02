@@ -2,9 +2,9 @@
 
 export LC_ALL=C
 KNOWN_VIOLATIONS=(
-    "src/bsha3-tx.cpp.*stoul"
-    "src/bsha3-tx.cpp.*trim_right"
-    "src/bsha3-tx.cpp:.*atoi"
+    "src/redblock-tx.cpp.*stoul"
+    "src/redblock-tx.cpp.*trim_right"
+    "src/redblock-tx.cpp:.*atoi"
     "src/core_read.cpp.*is_digit"
     "src/dbwrapper.cpp.*stoul"
     "src/dbwrapper.cpp:.*vsnprintf"

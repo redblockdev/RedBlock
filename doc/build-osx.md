@@ -78,15 +78,15 @@ Mining is also possible in disable-wallet mode using the `getblocktemplate` RPC 
 Running
 -------
 
-Bitcoin Core is now available at `./src/bsha3d`
+Bitcoin Core is now available at `./src/redblockd`
 
 Before running, it's recommended that you create an RPC configuration file:
 
-    echo -e "rpcuser=bitcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Bitcoin/bitcoin.conf"
+    echo -e "rpcuser=bitcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Bitcoin/redblock.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/Bitcoin/bitcoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Bitcoin/redblock.conf"
 
-The first time you run bsha3d, it will start downloading the blockchain. This process could take many hours, or even days on slower than average systems.
+The first time you run redblockd, it will start downloading the blockchain. This process could take many hours, or even days on slower than average systems.
 
 You can monitor the download process by looking at the debug.log file:
 
@@ -95,9 +95,9 @@ You can monitor the download process by looking at the debug.log file:
 Other commands:
 -------
 
-    ./src/bsha3d -daemon # Starts the bitcoin daemon.
-    ./src/bsha3-cli --help # Outputs a list of command-line options.
-    ./src/bsha3-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/redblockd -daemon # Starts the bitcoin daemon.
+    ./src/redblock-cli --help # Outputs a list of command-line options.
+    ./src/redblock-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Notes
 -----

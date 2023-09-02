@@ -38,9 +38,9 @@ OSX_PLIST=$(top_builddir)/share/qt/Info.plist #not installed
 OSX_QT_TRANSLATIONS = da,de,es,hu,ru,uk,zh_CN,zh_TW
 
 DIST_DOCS = $(wildcard doc/*.md) $(wildcard doc/release-notes/*.md)
-DIST_CONTRIB = $(top_srcdir)/contrib/bsha3-cli.bash-completion \
-	       $(top_srcdir)/contrib/bsha3-tx.bash-completion \
-	       $(top_srcdir)/contrib/bsha3d.bash-completion \
+DIST_CONTRIB = $(top_srcdir)/contrib/redblock-cli.bash-completion \
+	       $(top_srcdir)/contrib/redblock-tx.bash-completion \
+	       $(top_srcdir)/contrib/redblockd.bash-completion \
 	       $(top_srcdir)/contrib/init \
 	       $(top_srcdir)/contrib/install_db4.sh
 DIST_SHARE = \

@@ -23,13 +23,13 @@
 #define COPYRIGHT_HOLDERS "The %s developers"
 
 /* Copyright holder(s) */
-#define COPYRIGHT_HOLDERS_FINAL "The REDB developers"
+#define COPYRIGHT_HOLDERS_FINAL "The RedBlock developers"
 
 /* Replacement for %s in copyright holders string */
-#define COPYRIGHT_HOLDERS_SUBSTITUTION "REDB"
+#define COPYRIGHT_HOLDERS_SUBSTITUTION "RedBlock"
 
 /* Copyright year */
-#define COPYRIGHT_YEAR 2018
+#define COPYRIGHT_YEAR 2023
 
 /* Define to 1 to enable wallet functions */
 #define ENABLE_WALLET 1
@@ -340,22 +340,22 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "https://github.com/bsha3/bsha3/issues"
+#define PACKAGE_BUGREPORT "https://github.com/redblock/redblock/issues"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "REDB"
+#define PACKAGE_NAME "RedBlock"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "REDB 0.17.99"
+#define PACKAGE_STRING "RedBlock 0.1.0"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "bitcoin"
 
 /* Define to the home page for this package. */
-#define PACKAGE_URL "https://bsha3.org/"
+#define PACKAGE_URL "https://redblockcoin.com/"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "0.17.99"
+#define PACKAGE_VERSION "0.1.0"
 
 /* Define to necessary symbol if this constant uses a non-standard name on
    your system. */

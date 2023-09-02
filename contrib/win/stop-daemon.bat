@@ -1,3 +1,3 @@
 @ECHO OFF
 TITLE [REDB] Shutting down Daemon Process...
-bsha3-cli.exe stop
+redblock-cli.exe stop
