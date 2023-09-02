@@ -31,8 +31,8 @@ const std::function<std::string(const char*)> G_TRANSLATION_FUN = nullptr;
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called REDB,
- * which enables instant payments to anyone, anywhere in the world. REDB uses peer-to-peer technology to operate
+ * This is the developer documentation of the reference client for an experimental new digital currency called BSHA3,
+ * which enables instant payments to anyone, anywhere in the world. BSHA3 uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
  * The software is a community-driven open source project, released under the MIT license.
@@ -81,7 +81,7 @@ static bool AppInit(int argc, char* argv[])
         }
         else
         {
-            strUsage += "\nUsage:  redblockd [options]                     Start " PACKAGE_NAME " Daemon\n";
+            strUsage += "\nUsage:  bsha3d [options]                     Start " PACKAGE_NAME " Daemon\n";
             strUsage += "\n" + gArgs.GetHelpMessage();
         }
 
@@ -111,12 +111,12 @@ static bool AppInit(int argc, char* argv[])
         // Error out when loose non-argument tokens are encountered on command line
         for (int i = 1; i < argc; i++) {
             if (!IsSwitchChar(argv[i][0])) {
-                fprintf(stderr, "Error: Command line contains unexpected token '%s', see redblockd -h for a list of options.\n", argv[i]);
+                fprintf(stderr, "Error: Command line contains unexpected token '%s', see bsha3d -h for a list of options.\n", argv[i]);
                 return false;
             }
         }
 
-        // -server defaults to true for redblockd but not for the GUI so do this here
+        // -server defaults to true for bsha3d but not for the GUI so do this here
         gArgs.SoftSetBoolArg("-server", true);
         // Set this early so that parameter interactions go to console
         InitLogging();
@@ -143,7 +143,7 @@ static bool AppInit(int argc, char* argv[])
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 #endif
-            fprintf(stdout, "REDB server starting\n");
+            fprintf(stdout, "BSHA3 server starting\n");
 
             // Daemonize
             if (daemon(1, 0)) { // don't chdir (1), do close FDs (0)
@@ -191,7 +191,7 @@ int main(int argc, char* argv[])
 #endif
     SetupEnvironment();
 
-    // Connect redblockd signal handlers
+    // Connect bsha3d signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? EXIT_SUCCESS : EXIT_FAILURE);

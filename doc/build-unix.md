@@ -24,7 +24,7 @@ make
 make install # optional
 ```
 
-This will build redblock-qt as well, if the dependencies are met.
+This will build bsha3-qt as well, if the dependencies are met.
 
 Dependencies
 ---------------------
@@ -104,7 +104,7 @@ ZMQ dependencies (provides ZMQ API):
 
 GUI dependencies:
 
-If you want to build redblock-qt, make sure that the required packages for Qt development
+If you want to build bsha3-qt, make sure that the required packages for Qt development
 are installed. Qt 5 is necessary to build the GUI.
 To build without GUI pass `--without-gui`.
 
@@ -116,7 +116,7 @@ libqrencode (optional) can be installed with:
 
     sudo apt-get install libqrencode-dev
 
-Once these are installed, they will be found by configure and a redblock-qt executable will be
+Once these are installed, they will be found by configure and a bsha3-qt executable will be
 built by default.
 
 
@@ -142,7 +142,7 @@ libqrencode (optional) can be installed with:
 
 Notes
 -----
-The release is built with GCC and then "strip redblockd" to strip the debug
+The release is built with GCC and then "strip bsha3d" to strip the debug
 symbols, which reduces the executable size by about 90%.
 
 

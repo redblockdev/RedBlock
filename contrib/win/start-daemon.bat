@@ -1,3 +1,3 @@
 @ECHO OFF
-TITLE [REDB] Daemon Process (Syncs and Validates)
-redblockd.exe
+TITLE [BSHA3] Daemon Process (Syncs and Validates)
+bsha3d.exe

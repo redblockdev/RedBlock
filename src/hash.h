@@ -18,7 +18,7 @@
 
 typedef uint256 ChainCode;
 
-/** A hasher class for REDB's 256-bit hash (double SHA-3). */
+/** A hasher class for BSHA3's 256-bit hash (double SHA-3). */
 class CHash3 {
 private:
     CSHA3 sha;

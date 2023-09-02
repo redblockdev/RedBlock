@@ -1,7 +1,7 @@
-Contributing to REDB
+Contributing to BSHA3
 ============================
 
-The REDB project operates an open contributor model where anyone is
+The BSHA3 project operates an open contributor model where anyone is
 welcome to contribute towards development in the form of peer review, testing
 and patches. This document explains the practical process and guidelines for
 contributing.
@@ -82,7 +82,7 @@ the pull request affects. Valid areas as:
 
   - *Consensus* for changes to consensus critical code
   - *Docs* for changes to the documentation
-  - *Qt* for changes to redblock-qt
+  - *Qt* for changes to bsha3-qt
   - *Mining* for changes to the mining code
   - *Net* or *P2P* for changes to the peer-to-peer network code
   - *RPC/REST/ZMQ* for changes to the RPC, REST or ZMQ APIs

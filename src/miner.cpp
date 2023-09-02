@@ -494,11 +494,11 @@ CWallet* GetFirstWallet() {
     return vpwallets[0].get();
 }
 
-void static REDBMiner(const CChainParams& chainparams)
+void static BSHA3Miner(const CChainParams& chainparams)
 {
-    LogPrintf("REDB Miner -- started\n");
+    LogPrintf("BSHA3 Miner -- started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("redblock-miner");
+    RenameThread("bsha3-miner");
 
     unsigned int nExtraNonce = 0;
 
@@ -506,7 +506,7 @@ void static REDBMiner(const CChainParams& chainparams)
     CWallet* pWallet = GetFirstWallet();
 
     if (!EnsureWalletIsAvailable(pWallet, false)) {
-        LogPrintf("REDB Miner -- Wallet not available\n");
+        LogPrintf("BSHA3 Miner -- Wallet not available\n");
     }
 
     if (pWallet == nullptr)
@@ -563,13 +563,13 @@ void static REDBMiner(const CChainParams& chainparams)
 
             if (!pblocktemplate.get())
             {
-                LogPrintf("REDB Miner -- Keypool ran out, please call keypoolrefill before restarting the mining thread\n");
+                LogPrintf("BSHA3 Miner -- Keypool ran out, please call keypoolrefill before restarting the mining thread\n");
                 return;
             }
             CBlock *pblock = &pblocktemplate->block;
             IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
-            LogPrintf("REDB Miner -- Running miner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
+            LogPrintf("BSHA3 Miner -- Running miner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
                 ::GetSerializeSize(*pblock, PROTOCOL_VERSION));
 
             //
@@ -588,7 +588,7 @@ void static REDBMiner(const CChainParams& chainparams)
                     {
                         // Found a solution
                         SetThreadPriority(THREAD_PRIORITY_NORMAL);
-                        LogPrintf("REDB Miner:\n  proof-of-work found\n  hash: %s\n  target: %s\n", hash.GetHex(), hashTarget.GetHex());
+                        LogPrintf("BSHA3 Miner:\n  proof-of-work found\n  hash: %s\n  target: %s\n", hash.GetHex(), hashTarget.GetHex());
                         ProcessBlockFound(pblock, chainparams);
                         SetThreadPriority(THREAD_PRIORITY_LOWEST);
                         coinbaseScript->KeepScript();
@@ -635,17 +635,17 @@ void static REDBMiner(const CChainParams& chainparams)
     }
     catch (const boost::thread_interrupted&)
     {
-        LogPrintf("REDB Miner -- terminated\n");
+        LogPrintf("BSHA3 Miner -- terminated\n");
         throw;
     }
     catch (const std::runtime_error &e)
     {
-        LogPrintf("REDB Miner -- runtime error: %s\n", e.what());
+        LogPrintf("BSHA3 Miner -- runtime error: %s\n", e.what());
         return;
     }
 }
 
-int GenerateREDBs(bool fGenerate, int nThreads, const CChainParams& chainparams)
+int GenerateBSHA3s(bool fGenerate, int nThreads, const CChainParams& chainparams)
 {
 
     static boost::thread_group* minerThreads = nullptr;
@@ -672,7 +672,7 @@ int GenerateREDBs(bool fGenerate, int nThreads, const CChainParams& chainparams)
     nHashesPerSec = 0;
 
     for (int i = 0; i < nThreads; i++){
-        minerThreads->create_thread(boost::bind(&REDBMiner, boost::cref(chainparams)));
+        minerThreads->create_thread(boost::bind(&BSHA3Miner, boost::cref(chainparams)));
     }
 
     return numCores;

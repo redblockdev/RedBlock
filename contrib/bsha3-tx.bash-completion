@@ -1,15 +1,15 @@
-# bash programmable completion for redblock-tx(1)
+# bash programmable completion for bsha3-tx(1)
 # Copyright (c) 2016 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-_redblock_tx() {
+_bsha3_tx() {
     local cur prev words=() cword
-    local redblock_tx
+    local bsha3_tx
 
-    # save and use original argument to invoke redblock-tx for -help
+    # save and use original argument to invoke bsha3-tx for -help
     # it might not be in $PATH
-    redblock_tx="$1"
+    bsha3_tx="$1"
 
     COMPREPLY=()
     _get_comp_words_by_ref -n =: cur prev words cword
@@ -27,15 +27,15 @@ _redblock_tx() {
 
     if [[ "$cword" == 1 || ( "$prev" != "-create" && "$prev" == -* ) ]]; then
         # only options (or an uncompletable hex-string) allowed
-        # parse redblock-tx -help for options
+        # parse bsha3-tx -help for options
         local helpopts
-        helpopts=$($redblock_tx -help | sed -e '/^  -/ p' -e d )
+        helpopts=$($bsha3_tx -help | sed -e '/^  -/ p' -e d )
         COMPREPLY=( $( compgen -W "$helpopts" -- "$cur" ) )
     else
         # only commands are allowed
         # parse -help for commands
         local helpcmds
-        helpcmds=$($redblock_tx -help | sed -e '1,/Commands:/d' -e 's/=.*/=/' -e '/^  [a-z]/ p' -e d )
+        helpcmds=$($bsha3_tx -help | sed -e '1,/Commands:/d' -e 's/=.*/=/' -e '/^  [a-z]/ p' -e d )
         COMPREPLY=( $( compgen -W "$helpcmds" -- "$cur" ) )
     fi
 
@@ -46,7 +46,7 @@ _redblock_tx() {
 
     return 0
 } &&
-complete -F _redblock_tx redblock-tx
+complete -F _bsha3_tx bsha3-tx
 
 # Local variables:
 # mode: shell-script

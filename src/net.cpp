@@ -1539,7 +1539,7 @@ static void ThreadMapPort()
             }
         }
 
-        std::string strDesc = "REDB " + FormatFullVersion();
+        std::string strDesc = "BSHA3 " + FormatFullVersion();
 
         do {
 #ifndef UPNPDISCOVER_SUCCESS

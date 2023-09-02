@@ -1,31 +1,31 @@
-REDB Documentation
+BSHA3 Documentation
 ====================
 
 Setup
 ---------------------
-REDB is the name of both the original REDB client, and the peer-to-peer protocol / network it validates. It downloads and, by default, stores the entire history of REDB transactions, which requires about 2.8mb as of Nov 8, 2018. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few moments to a day or more.
+BSHA3 is the name of both the original BSHA3 client, and the peer-to-peer protocol / network it validates. It downloads and, by default, stores the entire history of BSHA3 transactions, which requires about 2.8mb as of Nov 8, 2018. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few moments to a day or more.
 
-Download REDB from either [redblock.org](https://redblock.org/releases/) or [GitHub](https://github.com/redblock/redblock).
+Download BSHA3 from either [bsha3.org](https://bsha3.org/releases/) or [GitHub](https://github.com/bsha3/bsha3).
 
 
 Running
 ---------------------
-The following are some helpful notes on how to run REDB on your native platform.
+The following are some helpful notes on how to run BSHA3 on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/redblock-qt` (GUI) or
-- `bin/redblockd` (headless)
+- `bin/bsha3-qt` (GUI) or
+- `bin/bsha3d` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run redblock-qt.exe.
+Unpack the files into a directory, and then run bsha3-qt.exe.
 
 ### macOS
 
-Drag REDB to your applications folder, and then run REDB.
+Drag BSHA3 to your applications folder, and then run BSHA3.
 
 ### Need Help?
 
@@ -50,7 +50,7 @@ The following are developer notes on how to build Bitcoin Core on your native pl
 
 Development
 ---------------------
-The REDB repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The BSHA3 repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)
@@ -73,7 +73,7 @@ The REDB repo's [root README](/README.md) contains relevant information on the d
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
-- [REDB's bitcoin.conf Configuration File](bitcoin-conf.md)
+- [BSHA3's bitcoin.conf Configuration File](bitcoin-conf.md)
 - [Files](files.md)
 - [Fuzz-testing](fuzzing.md)
 - [Reduce Traffic](reduce-traffic.md)

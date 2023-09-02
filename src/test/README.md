@@ -5,18 +5,18 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with `make check`.
 
-To run the redblockd tests manually, launch `src/test/test_bitcoin`. To recompile
+To run the bsha3d tests manually, launch `src/test/test_bitcoin`. To recompile
 after a test file was modified, run `make` and then run the test again. If you
 modify a non-test file, use `make -C src/test` to recompile only what's needed
-to run the redblockd tests.
+to run the bsha3d tests.
 
-To add more redblockd tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more bsha3d tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the `test/` directory or add new .cpp files that
 implement new BOOST_AUTO_TEST_SUITE sections.
 
-To run the redblock-qt tests manually, launch `src/qt/test/test_redblock-qt`
+To run the bsha3-qt tests manually, launch `src/qt/test/test_bsha3-qt`
 
-To add more redblock-qt tests, add them to the `src/qt/test/` directory and
+To add more bsha3-qt tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.
 
 ### Running individual tests

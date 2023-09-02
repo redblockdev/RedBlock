@@ -126,8 +126,8 @@
         <translation>Address king pamag-Tanggap</translation>
     </message>
     <message>
-        <source>Send coins to a REDB address</source>
-        <translation>Magpadalang barya king REDB address</translation>
+        <source>Send coins to a BSHA3 address</source>
+        <translation>Magpadalang barya king BSHA3 address</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -663,8 +663,8 @@
         <translation>Kopyan ing kasalungsungan pirma king system clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this REDB address</source>
-        <translation>Pirman ing mensayi ban patune na keka ya ining REDB address</translation>
+        <source>Sign the message to prove you own this BSHA3 address</source>
+        <translation>Pirman ing mensayi ban patune na keka ya ining BSHA3 address</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -683,8 +683,8 @@
         <translation>&amp;Beripikan ing Mensayi</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified REDB address</source>
-        <translation>Beripikan ing mensayi ban asiguradu a me pirma ya ini gamit ing mepiling REDB address</translation>
+        <source>Verify the message to ensure it was signed with the specified BSHA3 address</source>
+        <translation>Beripikan ing mensayi ban asiguradu a me pirma ya ini gamit ing mepiling BSHA3 address</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>

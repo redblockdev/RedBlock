@@ -108,7 +108,7 @@ BASE_SCRIPTS = [
     # vv Tests less than 30s vv
     'wallet_keypool_topup.py',
     'interface_zmq.py',
-    'interface_redblock_cli.py',
+    'interface_bsha3_cli.py',
     'mempool_resurrect.py',
     'wallet_txn_doublespend.py --mineblock',
     'wallet_txn_clone.py',
@@ -253,7 +253,7 @@ def main():
 
     logging.debug("Temporary test directory at %s" % tmpdir)
 
-    enable_redblockd = config["components"].getboolean("ENABLE_BITCOIND")
+    enable_bsha3d = config["components"].getboolean("ENABLE_BITCOIND")
 
     if config["environment"]["EXEEXT"] == ".exe" and not args.force:
         # https://github.com/bitcoin/bitcoin/commit/d52802551752140cf41f0d9a225a43e84404d3e9
@@ -261,7 +261,7 @@ def main():
         print("Tests currently disabled on Windows by default. Use --force option to enable")
         sys.exit(0)
 
-    if not enable_redblockd:
+    if not enable_bsha3d:
         print("No functional tests to run.")
         print("Rerun ./configure with --with-daemon and then make")
         sys.exit(0)
@@ -327,10 +327,10 @@ def main():
 def run_tests(test_list, src_dir, build_dir, tmpdir, jobs=1, enable_coverage=False, args=None, combined_logs_len=0, failfast=False):
     args = args or []
 
-    # Warn if redblockd is already running (unix only)
+    # Warn if bsha3d is already running (unix only)
     try:
-        if subprocess.check_output(["pidof", "redblockd"]) is not None:
-            print("%sWARNING!%s There is already a redblockd process running on this system. Tests may fail unexpectedly due to resource contention!" % (BOLD[1], BOLD[0]))
+        if subprocess.check_output(["pidof", "bsha3d"]) is not None:
+            print("%sWARNING!%s There is already a bsha3d process running on this system. Tests may fail unexpectedly due to resource contention!" % (BOLD[1], BOLD[0]))
     except (OSError, subprocess.SubprocessError):
         pass
 
@@ -578,7 +578,7 @@ class RPCCoverage():
     Coverage calculation works by having each test script subprocess write
     coverage files into a particular directory. These files contain the RPC
     commands invoked during testing, as well as a complete listing of RPC
-    commands per `redblock-cli help` (`rpc_interface.txt`).
+    commands per `bsha3-cli help` (`rpc_interface.txt`).
 
     After all tests complete, the commands run are combined and diff'd against
     the complete list to calculate uncovered RPC commands.

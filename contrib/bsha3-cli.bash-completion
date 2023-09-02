@@ -1,9 +1,9 @@
-# bash programmable completion for redblock-cli(1)
+# bash programmable completion for bsha3-cli(1)
 # Copyright (c) 2012-2016 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-# call $redblock-cli for RPC
+# call $bsha3-cli for RPC
 _bitcoin_rpc() {
     # determine already specified args necessary for RPC
     local rpcargs=()
@@ -14,7 +14,7 @@ _bitcoin_rpc() {
                 ;;
         esac
     done
-    $redblock_cli "${rpcargs[@]}" "$@"
+    $bsha3_cli "${rpcargs[@]}" "$@"
 }
 
 # Add wallet accounts to COMPREPLY
@@ -24,13 +24,13 @@ _bitcoin_accounts() {
     COMPREPLY=( "${COMPREPLY[@]}" $( compgen -W "$accounts" -- "$cur" ) )
 }
 
-_redblock_cli() {
+_bsha3_cli() {
     local cur prev words=() cword
-    local redblock_cli
+    local bsha3_cli
 
-    # save and use original argument to invoke redblock-cli for -help, help and RPC
-    # as redblock-cli might not be in $PATH
-    redblock_cli="$1"
+    # save and use original argument to invoke bsha3-cli for -help, help and RPC
+    # as bsha3-cli might not be in $PATH
+    bsha3_cli="$1"
 
     COMPREPLY=()
     _get_comp_words_by_ref -n = cur prev words cword
@@ -125,7 +125,7 @@ _redblock_cli() {
 
             # only parse -help if senseful
             if [[ -z "$cur" || "$cur" =~ ^- ]]; then
-                helpopts=$($redblock_cli -help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
+                helpopts=$($bsha3_cli -help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
             fi
 
             # only parse help if senseful
@@ -143,7 +143,7 @@ _redblock_cli() {
             ;;
     esac
 } &&
-complete -F _redblock_cli redblock-cli
+complete -F _bsha3_cli bsha3-cli
 
 # Local variables:
 # mode: shell-script

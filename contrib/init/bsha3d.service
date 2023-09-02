@@ -1,23 +1,23 @@
 # It is not recommended to modify this file in-place, because it will
 # be overwritten during package upgrades. If you want to add further
 # options or overwrite existing ones then use
-# $ systemctl edit redblockd.service
+# $ systemctl edit bsha3d.service
 # See "man systemd.service" for details.
 
 # Note that almost all daemon options could be specified in
-# /etc/redblock/bitcoin.conf
+# /etc/bsha3/bitcoin.conf
 
 [Unit]
-Description=REDB daemon
+Description=BSHA3 daemon
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/redblockd -daemon -conf=/etc/redblock/bitcoin.conf -pid=/run/redblockd/redblockd.pid
-# Creates /run/redblockd owned by bitcoin
-RuntimeDirectory=redblockd
+ExecStart=/usr/bin/bsha3d -daemon -conf=/etc/bsha3/bitcoin.conf -pid=/run/bsha3d/bsha3d.pid
+# Creates /run/bsha3d owned by bitcoin
+RuntimeDirectory=bsha3d
 User=bitcoin
 Type=forking
-PIDFile=/run/redblockd/redblockd.pid
+PIDFile=/run/bsha3d/bsha3d.pid
 Restart=on-failure
 
 # Hardening measures

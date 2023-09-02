@@ -10,7 +10,7 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between redblock-cli and redblockd)
+ * CBaseChainParams defines the base parameters (shared between bsha3-cli and bsha3d)
  * of a given instance of the Bitcoin system.
  */
 class CBaseChainParams

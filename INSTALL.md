@@ -1,5 +1,5 @@
-Building REDB
+Building BSHA3
 ================
 
 See doc/build-*.md for instructions on building the various
-elements of REDB, the reference implementation of the REDB protocol.
+elements of BSHA3, the reference implementation of the BSHA3 protocol.
