@@ -402,8 +402,8 @@
         <translation>Blad nutsbalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Versoek betalings (genereer QR kodes en bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and redblock: URIs)</source>
+        <translation>Versoek betalings (genereer QR kodes en redblock: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>

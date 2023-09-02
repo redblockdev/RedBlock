@@ -21,9 +21,9 @@
 
 #include <cmath>
 
-static const uint64_t GB_BYTES = 1000000000LL;
+static const uint64_t GB_BYTES = 200000000LL;
 /* Minimum free space (in GB) needed for data directory */
-constexpr uint64_t BLOCK_CHAIN_SIZE = 8;
+constexpr uint64_t BLOCK_CHAIN_SIZE = 2;
 /* Minimum free space (in GB) needed for data directory when pruned; Does not include prune target */
 static const uint64_t CHAIN_STATE_SIZE = 1;
 /* Total required space (in GB) depending on user choice (prune, not prune) */
@@ -127,8 +127,8 @@ Intro::Intro(QWidget *parent) :
     ui->lblExplanation1->setText(ui->lblExplanation1->text()
         .arg(tr(PACKAGE_NAME))
         .arg(BLOCK_CHAIN_SIZE)
-        .arg(2018)
-        .arg(tr("REDB"))
+        .arg(2023)
+        .arg(tr("RedBlock"))
     );
     ui->lblExplanation2->setText(ui->lblExplanation2->text().arg(tr(PACKAGE_NAME)));
 
@@ -147,7 +147,7 @@ Intro::Intro(QWidget *parent) :
     }
     requiredSpace += CHAIN_STATE_SIZE;
     ui->sizeWarningLabel->setText(
-        tr("%1 will download and store a copy of the REDB blockchain.").arg(tr(PACKAGE_NAME)) + " " +
+        tr("%1 will download and store a copy of the RedBlock blockchain.").arg(tr(PACKAGE_NAME)) + " " +
         storageRequiresMsg.arg(requiredSpace) + " " +
         tr("The wallet will also be stored in this directory.")
     );

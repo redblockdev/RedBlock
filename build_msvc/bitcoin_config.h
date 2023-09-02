@@ -23,7 +23,7 @@
 #define COPYRIGHT_HOLDERS "The %s developers"
 
 /* Copyright holder(s) */
-#define COPYRIGHT_HOLDERS_FINAL "The RedBlock developers"
+#define COPYRIGHT_HOLDERS_FINAL "The Bitcoin developers"
 
 /* Replacement for %s in copyright holders string */
 #define COPYRIGHT_HOLDERS_SUBSTITUTION "RedBlock"

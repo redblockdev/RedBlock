@@ -435,8 +435,8 @@ Alihkan fail data ke dalam tab semasa</translation>
 </translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Request payments (generates QR codes and bitcoin: URIs)
+        <source>Request payments (generates QR codes and redblock: URIs)</source>
+        <translation>Request payments (generates QR codes and redblock: URIs)
 </translation>
     </message>
     <message>
