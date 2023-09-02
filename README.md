@@ -1,17 +1,17 @@
 
 (Read HowtoBuild.md to build the new hardfork. )
 
-BSHA3
+REDB
 =====================================
 
 https://bsha3.com
 
 [View Releases](https://github.com/bsha3/bsha3/releases)
 
-What is BSHA3?
+What is REDB?
 ---------------
 
-BSHA3 is an experimental blockchain based on Bitcoin. Almost all instances of SHA256, a prominent algorithm throughout Bitcoin, are replaced with SHA3-256.
+REDB is an experimental blockchain based on Bitcoin. Almost all instances of SHA256, a prominent algorithm throughout Bitcoin, are replaced with SHA3-256.
 
 Its roadmap is to have extreme parity with Bitcoin and Bitcoin Core, with upstream merges accounting for the bulk of its future changes. The issue tracker may be used for discussion and review of upcoming Bitcoin Core pull requests, as well as code issues.
 
@@ -35,7 +35,7 @@ the Bitcoin Core software, see https://bitcoincore.org/en/download/, or read the
 License
 -------
 
-BSHA3 is released under the terms of the MIT license. See [COPYING](COPYING) for more
+REDB is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Building
@@ -107,9 +107,9 @@ Create a wallet backup right away. There are two ways to do this:
 
 Your datadir is in the following folder for each operating system:
 
-- Windows 10 - `C:\Documents and Settings\<username>\Application Data\BSHA3`
-- Windows 7 - `C:\Users\<username>\AppData\Roaming\BSHA3`
-- Mac - `~/Library/Application Support/BSHA3`
+- Windows 10 - `C:\Documents and Settings\<username>\Application Data\REDB`
+- Windows 7 - `C:\Users\<username>\AppData\Roaming\REDB`
+- Mac - `~/Library/Application Support/REDB`
 - Unix - `~/.bsha3`
 
 Development Process

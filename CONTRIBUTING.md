@@ -1,7 +1,7 @@
-Contributing to BSHA3
+Contributing to REDB
 ============================
 
-The BSHA3 project operates an open contributor model where anyone is
+The REDB project operates an open contributor model where anyone is
 welcome to contribute towards development in the form of peer review, testing
 and patches. This document explains the practical process and guidelines for
 contributing.

@@ -85,12 +85,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your BSHA3 addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your REDB addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>These are your BSHA3 addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your REDB addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -455,8 +455,8 @@
     </message>
     <message>
         <location line="-880"/>
-        <source>Send coins to a BSHA3 address</source>
-        <translation>Send coins to a BSHA3 address</translation>
+        <source>Send coins to a REDB address</source>
+        <translation>Send coins to a REDB address</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -520,13 +520,13 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your BSHA3 addresses to prove you own them</source>
-        <translation>Sign messages with your BSHA3 addresses to prove you own them</translation>
+        <source>Sign messages with your REDB addresses to prove you own them</source>
+        <translation>Sign messages with your REDB addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified BSHA3 addresses</source>
-        <translation>Verify messages to ensure they were signed with specified BSHA3 addresses</translation>
+        <source>Verify messages to ensure they were signed with specified REDB addresses</source>
+        <translation>Verify messages to ensure they were signed with specified REDB addresses</translation>
     </message>
     <message>
         <location line="+58"/>
@@ -960,7 +960,7 @@
     </message>
     <message>
         <location line="+75"/>
-        <source>The entered address &quot;%1&quot; is not a valid BSHA3 address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid REDB address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1711,7 +1711,7 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid BSHA3 address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid REDB address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1843,7 +1843,7 @@
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+115"/>
-        <source>Enter a BSHA3 address (e.g. %1)</source>
+        <source>Enter a REDB address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3005,7 +3005,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+101"/>
-        <source>Warning: Invalid BSHA3 address</source>
+        <source>Warning: Invalid REDB address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3060,7 +3060,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+39"/>
-        <source>The BSHA3 address to send the payment to</source>
+        <source>The REDB address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3184,7 +3184,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+18"/>
-        <source>The BSHA3 address to sign the message with</source>
+        <source>The REDB address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3226,8 +3226,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this BSHA3 address</source>
-        <translation>Sign the message to prove you own this BSHA3 address</translation>
+        <source>Sign the message to prove you own this REDB address</source>
+        <translation>Sign the message to prove you own this REDB address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3257,13 +3257,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+21"/>
-        <source>The BSHA3 address the message was signed with</source>
+        <source>The REDB address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified BSHA3 address</source>
-        <translation>Verify the message to ensure it was signed with the specified BSHA3 address</translation>
+        <source>Verify the message to ensure it was signed with the specified REDB address</source>
+        <translation>Verify the message to ensure it was signed with the specified REDB address</translation>
     </message>
     <message>
         <location line="+3"/>

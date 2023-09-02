@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>BSHA3-Qt</string>
+  <string>REDB-Qt</string>
   
   <key>CFBundleName</key>
-  <string>BSHA3-Qt</string>
+  <string>REDB-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.bitcoinfoundation.BSHA3-Qt</string>
+  <string>org.bitcoinfoundation.REDB-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>

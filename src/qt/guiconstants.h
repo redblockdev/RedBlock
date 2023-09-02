@@ -46,9 +46,9 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "BSHA3"
+#define QAPP_ORG_NAME "REDB"
 #define QAPP_ORG_DOMAIN "bsha3.org"
-#define QAPP_APP_NAME_DEFAULT "BSHA3-Qt"
-#define QAPP_APP_NAME_TESTNET "BSHA3-Qt-testnet"
+#define QAPP_APP_NAME_DEFAULT "REDB-Qt"
+#define QAPP_APP_NAME_TESTNET "REDB-Qt-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

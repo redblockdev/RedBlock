@@ -8,7 +8,7 @@
 # /etc/bsha3/bitcoin.conf
 
 [Unit]
-Description=BSHA3 daemon
+Description=REDB daemon
 After=network.target
 
 [Service]

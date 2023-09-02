@@ -91,6 +91,7 @@ Once the source code is ready the build steps are below:
 
     PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') # strip out problematic Windows %PATH% imported var
     cd depends
+    sudo bash -c "echo 0 > /proc/sys/fs/binfmt_misc/status"
     make HOST=x86_64-w64-mingw32
     cd ..
     ./autogen.sh # not required when building from tarball

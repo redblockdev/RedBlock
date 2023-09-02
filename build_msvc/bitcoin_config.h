@@ -23,10 +23,10 @@
 #define COPYRIGHT_HOLDERS "The %s developers"
 
 /* Copyright holder(s) */
-#define COPYRIGHT_HOLDERS_FINAL "The BSHA3 developers"
+#define COPYRIGHT_HOLDERS_FINAL "The REDB developers"
 
 /* Replacement for %s in copyright holders string */
-#define COPYRIGHT_HOLDERS_SUBSTITUTION "BSHA3"
+#define COPYRIGHT_HOLDERS_SUBSTITUTION "REDB"
 
 /* Copyright year */
 #define COPYRIGHT_YEAR 2018
@@ -343,10 +343,10 @@
 #define PACKAGE_BUGREPORT "https://github.com/bsha3/bsha3/issues"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "BSHA3"
+#define PACKAGE_NAME "REDB"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "BSHA3 0.17.99"
+#define PACKAGE_STRING "REDB 0.17.99"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "bitcoin"

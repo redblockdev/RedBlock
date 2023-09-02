@@ -704,13 +704,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 
 fs::path GetDefaultDataDir()
 {
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\BSHA3
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\BSHA3
-    // Mac: ~/Library/Application Support/BSHA3
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\REDB
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\REDB
+    // Mac: ~/Library/Application Support/REDB
     // Unix: ~/.bsha3
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "BSHA3";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "REDB";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -720,7 +720,7 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/BSHA3";
+    return pathRet / "Library/Application Support/REDB";
 #else
     // Unix
     return pathRet / ".bsha3";
@@ -1240,8 +1240,8 @@ std::string CopyrightHolders(const std::string& strPrefix)
     std::string strCopyrightHolders = strPrefix + strprintf(_(COPYRIGHT_HOLDERS), _(COPYRIGHT_HOLDERS_SUBSTITUTION));
 
     // Check for untranslated substitution to make sure Bitcoin Core copyright is not removed by accident
-    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("BSHA3") == std::string::npos) {
-        strCopyrightHolders += "\n" + strPrefix + "The BSHA3 developers";
+    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("REDB") == std::string::npos) {
+        strCopyrightHolders += "\n" + strPrefix + "The REDB developers";
     }
     return strCopyrightHolders;
 }

@@ -150,7 +150,7 @@
         <translation>Дискдаги блоклар қайта индексланмоқда...</translation>
     </message>
     <message>
-        <source>Send coins to a BSHA3 address</source>
+        <source>Send coins to a REDB address</source>
         <translation>Тангаларни Bitcoin манзилига жўнатиш</translation>
     </message>
     <message>
@@ -202,11 +202,11 @@
         <translation>Ҳамёнингизга тегишли махфий калитларни кодлаш</translation>
     </message>
     <message>
-        <source>Sign messages with your BSHA3 addresses to prove you own them</source>
+        <source>Sign messages with your REDB addresses to prove you own them</source>
         <translation>Bitcoin манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BSHA3 addresses</source>
+        <source>Verify messages to ensure they were signed with specified REDB addresses</source>
         <translation>Хабарларни махсус Bitcoin манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
     </message>
     <message>
@@ -674,7 +674,7 @@
         <translation>Миқдори</translation>
     </message>
     <message>
-        <source>Enter a BSHA3 address (e.g. %1)</source>
+        <source>Enter a REDB address (e.g. %1)</source>
         <translation>Bitcoin манзилини киритинг (масалан.  %1)</translation>
     </message>
     <message>

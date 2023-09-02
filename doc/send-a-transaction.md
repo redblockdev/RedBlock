@@ -10,7 +10,7 @@ TXID=$(./src/bsha3-cli sendtoaddress $ADDR 49.999)
 
 ## `createrawtransaction`:
 
-Use input(s), by txid and vout, to create spendable outputs at destination addr(s). Leftovers become fees collected by miners; be sure to account for change from your inputs. This example input spents most of a 50 BSHA3 coinbase reward.
+Use input(s), by txid and vout, to create spendable outputs at destination addr(s). Leftovers become fees collected by miners; be sure to account for change from your inputs. This example input spents most of a 50 REDB coinbase reward.
 
 ```
 ./src/bsha3d

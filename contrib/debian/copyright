@@ -1,13 +1,13 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: BSHA3
-Upstream-Contact: BSHA3 Developers
+Upstream-Name: REDB
+Upstream-Contact: REDB Developers
 Source: https://github.com/bsha3/bsha3
 
 Files: *
-Copyright: 2018, BSHA3 and Bitcoin Developers
+Copyright: 2018, REDB and Bitcoin Developers
 License: Expat
-Comment: BSHA3 Developers encompasses the current developers listed on bsha3.org,
-         as well as the numerous contributors to the Bitcoin and BSHA3 projects.
+Comment: REDB Developers encompasses the current developers listed on bsha3.org,
+         as well as the numerous contributors to the Bitcoin and REDB projects.
 
 Files: debian/*
 Copyright: 2010-2011, Jonas Smedegaard <dr@jones.dk>
