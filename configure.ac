@@ -1,23 +1,23 @@
 dnl require autoconf 2.60 (AS_ECHO/AS_ECHO_N)
 AC_PREREQ([2.60])
 define(_CLIENT_VERSION_MAJOR, 0)
-define(_CLIENT_VERSION_MINOR, 17)
-define(_CLIENT_VERSION_REVISION, 99)
+define(_CLIENT_VERSION_MINOR, 1)
+define(_CLIENT_VERSION_REVISION, 0)
 define(_CLIENT_VERSION_BUILD, 1)
 define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2023)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
-define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[BSHA3]])
-AC_INIT([BSHA3],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/bsha3/bsha3/issues],[bitcoin],[https://bsha3.org/])
+define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[REDB]])
+AC_INIT([REDB],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/redblockdev/redblock/issues],[bitcoin],[https://redblock.com/])
 AC_CONFIG_SRCDIR([src/validation.cpp])
 AC_CONFIG_HEADERS([src/config/bitcoin-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-BITCOIN_DAEMON_NAME=bsha3d
-BITCOIN_GUI_NAME=bsha3-qt
-BITCOIN_CLI_NAME=bsha3-cli
-BITCOIN_TX_NAME=bsha3-tx
+BITCOIN_DAEMON_NAME=redblockd
+BITCOIN_GUI_NAME=redblock-qt
+BITCOIN_CLI_NAME=redblock-cli
+BITCOIN_TX_NAME=redblock-tx
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 AC_ARG_VAR(ARFLAGS, [Flags for the archiver, defaults to <cr> if not set])
@@ -407,21 +407,21 @@ CPPFLAGS="$CPPFLAGS -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS"
 
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
-  [build bsha3-cli bsha3-tx (default=yes)])],
+  [build redblock-cli redblock-tx (default=yes)])],
   [build_bitcoin_utils=$withval],
   [build_bitcoin_utils=yes])
 
 AC_ARG_ENABLE([util-cli],
   [AS_HELP_STRING([--enable-util-cli],
-  [build bsha3-cli])],
-  [build_bsha3_cli=$enableval],
-  [build_bsha3_cli=$build_bitcoin_utils])
+  [build redblock-cli])],
+  [build_redblock_cli=$enableval],
+  [build_redblock_cli=$build_bitcoin_utils])
 
 AC_ARG_ENABLE([util-tx],
   [AS_HELP_STRING([--enable-util-tx],
-  [build bsha3-tx])],
-  [build_bsha3_tx=$enableval],
-  [build_bsha3_tx=$build_bitcoin_utils])
+  [build redblock-tx])],
+  [build_redblock_tx=$enableval],
+  [build_redblock_tx=$build_bitcoin_utils])
 
 AC_ARG_WITH([libs],
   [AS_HELP_STRING([--with-libs],
@@ -431,9 +431,9 @@ AC_ARG_WITH([libs],
 
 AC_ARG_WITH([daemon],
   [AS_HELP_STRING([--with-daemon],
-  [build bsha3d daemon (default=yes)])],
-  [build_bsha3d=$withval],
-  [build_bsha3d=yes])
+  [build redblockd daemon (default=yes)])],
+  [build_redblockd=$withval],
+  [build_redblockd=yes])
 
 use_pkgconfig=yes
 case $host in
@@ -903,7 +903,7 @@ BITCOIN_QT_INIT
 dnl sets $bitcoin_enable_qt, $bitcoin_enable_qt_test, $bitcoin_enable_qt_dbus
 BITCOIN_QT_CONFIGURE([$use_pkgconfig])
 
-if test x$build_bsha3_cli$build_bsha3_tx$build_bsha3d$bitcoin_enable_qt$use_tests$use_bench = xnononononono; then
+if test x$build_redblock_cli$build_redblock_tx$build_redblockd$bitcoin_enable_qt$use_tests$use_bench = xnononononono; then
     use_boost=no
 else
     use_boost=yes
@@ -1093,7 +1093,7 @@ if test x$use_pkgconfig = xyes; then
       if test x$use_qr != xno; then
         BITCOIN_QT_CHECK([PKG_CHECK_MODULES([QR], [libqrencode], [have_qrencode=yes], [have_qrencode=no])])
       fi
-      if test x$build_bsha3_cli$build_bsha3_tx$build_bsha3d$bitcoin_enable_qt$use_tests != xnonononono; then
+      if test x$build_redblock_cli$build_redblock_tx$build_redblockd$bitcoin_enable_qt$use_tests != xnonononono; then
         PKG_CHECK_MODULES([EVENT], [libevent],, [AC_MSG_ERROR(libevent not found.)])
         if test x$TARGET_OS != xwindows; then
           PKG_CHECK_MODULES([EVENT_PTHREADS], [libevent_pthreads],, [AC_MSG_ERROR(libevent_pthreads not found.)])
@@ -1118,7 +1118,7 @@ else
   AC_CHECK_HEADER([openssl/ssl.h],, AC_MSG_ERROR(libssl headers missing),)
   AC_CHECK_LIB([ssl],         [main],SSL_LIBS=-lssl, AC_MSG_ERROR(libssl missing))
 
-  if test x$build_bsha3_cli$build_bsha3_tx$build_bsha3d$bitcoin_enable_qt$use_tests != xnonononono; then
+  if test x$build_redblock_cli$build_redblock_tx$build_redblockd$bitcoin_enable_qt$use_tests != xnonononono; then
     AC_CHECK_HEADER([event2/event.h],, AC_MSG_ERROR(libevent headers missing),)
     AC_CHECK_LIB([event],[main],EVENT_LIBS=-levent,AC_MSG_ERROR(libevent missing))
     if test x$TARGET_OS != xwindows; then
@@ -1185,7 +1185,7 @@ dnl univalue check
 
 need_bundled_univalue=yes
 
-if test x$build_bsha3_cli$build_bsha3_tx$build_bsha3d$bitcoin_enable_qt$use_tests$use_bench = xnononononono; then
+if test x$build_redblock_cli$build_redblock_tx$build_redblockd$bitcoin_enable_qt$use_tests$use_bench = xnononononono; then
   need_bundled_univalue=no
 else
 
@@ -1233,17 +1233,17 @@ if test x$enable_bip70 != xno; then
 BITCOIN_QT_PATH_PROGS([PROTOC], [protoc],$protoc_bin_path)
 fi
 
-AC_MSG_CHECKING([whether to build bsha3d])
-AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_bsha3d = xyes])
-AC_MSG_RESULT($build_bsha3d)
+AC_MSG_CHECKING([whether to build redblockd])
+AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_redblockd = xyes])
+AC_MSG_RESULT($build_redblockd)
 
-AC_MSG_CHECKING([whether to build bsha3-cli])
-AM_CONDITIONAL([BUILD_BITCOIN_CLI], [test x$build_bsha3_cli = xyes])
-AC_MSG_RESULT($build_bsha3_cli)
+AC_MSG_CHECKING([whether to build redblock-cli])
+AM_CONDITIONAL([BUILD_BITCOIN_CLI], [test x$build_redblock_cli = xyes])
+AC_MSG_RESULT($build_redblock_cli)
 
-AC_MSG_CHECKING([whether to build bsha3-tx])
-AM_CONDITIONAL([BUILD_BITCOIN_TX], [test x$build_bsha3_tx = xyes])
-AC_MSG_RESULT($build_bsha3_tx)
+AC_MSG_CHECKING([whether to build redblock-tx])
+AM_CONDITIONAL([BUILD_BITCOIN_TX], [test x$build_redblock_tx = xyes])
+AC_MSG_RESULT($build_redblock_tx)
 
 AC_MSG_CHECKING([whether to build libraries])
 AM_CONDITIONAL([BUILD_BITCOIN_LIBS], [test x$build_bitcoin_libs = xyes])
@@ -1342,7 +1342,7 @@ if test x$bitcoin_enable_qt != xno; then
     AC_MSG_WARN("xgettext is required to update qt translations")
   fi
 
-  AC_MSG_CHECKING([whether to build test_bsha3-qt])
+  AC_MSG_CHECKING([whether to build test_redblock-qt])
   if test x$use_gui_tests$bitcoin_enable_qt_test = xyesyes; then
     AC_MSG_RESULT([yes])
     BUILD_TEST_QT="yes"
@@ -1378,7 +1378,7 @@ else
   AC_MSG_RESULT([no])
 fi
 
-if test x$build_bsha3_cli$build_bsha3_tx$build_bitcoin_libs$build_bsha3d$bitcoin_enable_qt$use_bench$use_tests = xnonononononono; then
+if test x$build_redblock_cli$build_redblock_tx$build_bitcoin_libs$build_redblockd$bitcoin_enable_qt$use_bench$use_tests = xnonononononono; then
   AC_MSG_ERROR([No targets! Please specify at least one of: --with-utils --with-libs --with-daemon --with-gui --enable-bench or --enable-tests])
 fi
 

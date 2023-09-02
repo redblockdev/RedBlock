@@ -30,8 +30,8 @@ SOURCE_LANG = 'bitcoin_en.ts'
 LOCALE_DIR = 'src/qt/locale'
 # Minimum number of messages for translation to be considered at all
 MIN_NUM_MESSAGES = 10
-# Regexp to check for BSHA3 addresses
-ADDRESS_REGEXP = re.compile('([13ac]|bc1|bsha31)[a-zA-Z0-9]{30,}')
+# Regexp to check for REDB addresses
+ADDRESS_REGEXP = re.compile('([13ac]|bc1|redblock1)[a-zA-Z0-9]{30,}')
 
 def check_at_repository_root():
     if not os.path.exists('.git'):
@@ -126,7 +126,7 @@ def escape_cdata(text):
 
 def contains_bitcoin_addr(text, errors):
     if text != None and ADDRESS_REGEXP.search(text) != None:
-        errors.append('Translation "%s" contains a bsha3 or bitcoin address. This will be removed.' % (text))
+        errors.append('Translation "%s" contains a redblock or bitcoin address. This will be removed.' % (text))
         return True
     return False
 

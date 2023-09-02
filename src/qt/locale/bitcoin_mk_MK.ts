@@ -138,7 +138,7 @@
         <translation>Повторно индексирање на блокови од дискот...</translation>
     </message>
     <message>
-        <source>Send coins to a BSHA3 address</source>
+        <source>Send coins to a REDB address</source>
         <translation>Испрати биткоини на Биткоин адреса</translation>
     </message>
     <message>

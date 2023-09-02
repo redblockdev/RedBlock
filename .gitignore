@@ -1,13 +1,13 @@
 *.tar.gz
 
 *.exe
-src/bsha3
-src/bsha3d
-src/bsha3-cli
-src/bsha3-tx
+src/redblock
+src/redblockd
+src/redblock-cli
+src/redblock-tx
 src/test/test_bitcoin
 src/test/test_bitcoin_fuzzy
-src/qt/test/test_bsha3-qt
+src/qt/test/test_redblock-qt
 
 # autoreconf
 Makefile.in
@@ -44,11 +44,11 @@ src/qt/forms/ui_*.h
 
 src/qt/test/moc*.cpp
 
-src/qt/bsha3-qt.config
-src/qt/bsha3-qt.creator
-src/qt/bsha3-qt.creator.user
-src/qt/bsha3-qt.files
-src/qt/bsha3-qt.includes
+src/qt/redblock-qt.config
+src/qt/redblock-qt.creator
+src/qt/redblock-qt.creator.user
+src/qt/redblock-qt.files
+src/qt/redblock-qt.includes
 
 .deps
 .dirstamp
@@ -80,13 +80,13 @@ src/qt/bsha3-qt.includes
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-bsha3-qt
-BSHA3-Qt.app
+redblock-qt
+REDB-Qt.app
 background.tiff*
 
 # Unit-tests
 Makefile.test
-bsha3-qt_test
+redblock-qt_test
 
 # Resources cpp
 qrc_*.cpp
