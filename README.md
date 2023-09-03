@@ -1,4 +1,4 @@
-![](./share/pixmaps/bitcoin256.png)
+![](./share/pixmaps/banner_unleashed.png)
 
 RedBlock Core
 ===========================
