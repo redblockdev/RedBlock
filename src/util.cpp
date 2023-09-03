@@ -1240,8 +1240,8 @@ std::string CopyrightHolders(const std::string& strPrefix)
     std::string strCopyrightHolders = strPrefix + strprintf(_(COPYRIGHT_HOLDERS), _(COPYRIGHT_HOLDERS_SUBSTITUTION));
 
     // Check for untranslated substitution to make sure Bitcoin Core copyright is not removed by accident
-    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("REDB") == std::string::npos) {
-        strCopyrightHolders += "\n" + strPrefix + "The RedBlock developers";
+    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("RedBlock") == std::string::npos) {
+        strCopyrightHolders += "\n" + strPrefix + "The Bitcoin developers";
     }
     return strCopyrightHolders;
 }
