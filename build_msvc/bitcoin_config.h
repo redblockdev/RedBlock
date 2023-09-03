@@ -349,7 +349,7 @@
 #define PACKAGE_STRING "RedBlock 0.1.0"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "bitcoin"
+#define PACKAGE_TARNAME "redblock"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL "https://redblockcoin.com/"
