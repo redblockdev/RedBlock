@@ -1,6 +1,6 @@
 ![](./share/pixmaps/bitcoin256.png)
 
-ReBlock Core
+RedBlock Core
 ===========================
 
 
