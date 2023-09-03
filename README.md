@@ -4,18 +4,16 @@
 REDB
 =====================================
 
-https://redblock.com
+https://redblockcoin.com
 
-[View Releases](https://github.com/redblock/redblock/releases)
+[View Releases](https://github.com/redblockdev/redblock/releases)
 
-What is REDB?
+What is RedBlock?
 ---------------
 
-REDB is an experimental blockchain based on Bitcoin. Almost all instances of SHA256, a prominent algorithm throughout Bitcoin, are replaced with SHA3-256.
+RedBlock is an experimental blockchain based on BSHA3 which is based off Bitcoin. Almost all instances of SHA256, a prominent algorithm throughout Bitcoin, are replaced with SHA3-256.
 
-Its roadmap is to have extreme parity with Bitcoin and Bitcoin Core, with upstream merges accounting for the bulk of its future changes. The issue tracker may be used for discussion and review of upcoming Bitcoin Core pull requests, as well as code issues.
-
-It has an identical difficulty adjustment and halving functions as Bitcoin in its present form.
+RedBlock is a direct fork of the first SHA3-256 blockchain BSHA3. BSHA3 has been moved to the graveyard, RedBlock aims to pickup where it left off. RedBlock is new blockchain but share the same genesis block as BSHA3. RedBlock forks at block 1 and creates a completly new chain. RedBlock also has a different blocktime and a max supply of only 10,515 coins. Unlike other SHA3d projects RedBlock does not have a premine and will never have a developer fee. 
 
 Its genesis block has a timestamp (`nTime`) of `1540053565`.
 
