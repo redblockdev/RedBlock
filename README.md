@@ -1,10 +1,15 @@
+![](./share/pixmaps/bitcoin256.png)
+
+ReBlock Core
+===========================
+
+
+https://www.redblockcoin.com/
 
 (Read HowtoBuild.md to build the new hardfork. )
 
 REDB
 =====================================
-
-https://redblockcoin.com
 
 [View Releases](https://github.com/redblockdev/redblock/releases)
 
