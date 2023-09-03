@@ -13,7 +13,7 @@ What is RedBlock?
 
 RedBlock is an experimental blockchain based on BSHA3 which is based off Bitcoin. Almost all instances of SHA256, a prominent algorithm throughout Bitcoin, are replaced with SHA3-256.
 
-RedBlock is a direct fork of the first SHA3-256 blockchain BSHA3. BSHA3 has been moved to the graveyard, RedBlock aims to pickup where it left off. RedBlock is new blockchain but share the same genesis block as BSHA3. RedBlock forks at block 1 and creates a completly new chain. RedBlock also has a different blocktime and a max supply of only 10,515 coins. Unlike other SHA3d projects RedBlock does not have a premine and will never have a developer fee. 
+RedBlock is a direct fork of the first SHA3-256 blockchain BSHA3. BSHA3 has been moved to the graveyard, RedBlock aims to pickup where it left off. RedBlock is new blockchain but shares the same genesis block as BSHA3. RedBlock forks at block 1 and creates a completly new chain. RedBlock also has a different blocktime and a max supply of only 10,515 coins. Unlike other SHA3d projects RedBlock does not have a premine and will never have a developer fee. 
 
 Its genesis block has a timestamp (`nTime`) of `1540053565`.
 
