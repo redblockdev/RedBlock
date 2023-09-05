@@ -6,7 +6,6 @@ RedBlock Core
 
 https://www.redblockcoin.com/
 
-(Read HowtoBuild.md to build the new hardfork. )
 
 REDB
 =====================================
@@ -22,18 +21,15 @@ RedBlock is a direct fork of the first SHA3-256 blockchain BSHA3. BSHA3 has been
 
 Its genesis block has a timestamp (`nTime`) of `1540053565`.
 
-What is Bitcoin?
-----------------
+## Tech Specification
+- Max Supply: 10,515 REDB, halving every year
+- Block Time: 60 seconds
+- Block Reward: 0.01 REDB
+- Mining Algorithm: SHA3d
 
-Bitcoin is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. Bitcoin uses peer-to-peer technology to operate
-with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Bitcoin Core is the name of open source
-software which enables the use of this currency.
 
-For more information, as well as an immediately useable, binary version of
-the Bitcoin Core software, see https://bitcoincore.org/en/download/, or read the
-[original whitepaper](https://bitcoincore.org/bitcoin.pdf).
+OK, but seriously what is RedBlock?
+
 
 License
 -------
