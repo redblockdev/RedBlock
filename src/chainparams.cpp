@@ -68,7 +68,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 525600;// one year
+        consensus.nSubsidyHalvingInterval = 525600;
         consensus.nBIP34Enabled = true;
         consensus.nBIP65Enabled = true;
         consensus.nBIP66Enabled = true;
@@ -77,7 +77,7 @@ public:
         consensus.powLimit = uint256S("000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
         consensus.nPowTargetSpacing = 60;
-	    consensus.lwmaAveragingWindow = 45;
+	consensus.lwmaAveragingWindow = 45;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1916; // 95% of 2016
@@ -98,10 +98,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xdf;
+        pchMessageStart[0] = 0xf5;
         pchMessageStart[1] = 0xb3;
-        pchMessageStart[2] = 0xdf;
-        pchMessageStart[3] = 0xba;
+        pchMessageStart[2] = 0xba;
+        pchMessageStart[3] = 0xdf;
         nDefaultPort = 6211;
         nPruneAfterHeight = 100000;
 
@@ -120,8 +120,8 @@ public:
 	// String 'rem-' is added to set it to be invalid. Need to update this when there is a new seed.
         vSeeds.emplace_back("dnsseed.redblockcoin.com"); // Supports x1, x5, x9, and xd
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,85);// b
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,60);// R
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,83);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,88);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
