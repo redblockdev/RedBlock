@@ -84,11 +84,12 @@ PlatformStyle::PlatformStyle(const QString &_name, bool _imagesOnButtons, bool _
         const QColor colorHighlightFg(QApplication::palette().color(QPalette::HighlightedText));
         const QColor colorText(QApplication::palette().color(QPalette::WindowText));
         const int colorTextLightness = colorText.lightness();
-        QColor colorbase;
-        if (abs(colorHighlightBg.lightness() - colorTextLightness) < abs(colorHighlightFg.lightness() - colorTextLightness))
+//        QColor colorbase;
+        QColor colorbase = QColor(204, 0, 0); // RedBlock Red
+        /*if (abs(colorHighlightBg.lightness() - colorTextLightness) < abs(colorHighlightFg.lightness() - colorTextLightness))
             colorbase = colorHighlightBg;
         else
-            colorbase = colorHighlightFg;
+            colorbase = colorHighlightFg;*/
         singleColor = colorbase;
     }
     // Determine text color
