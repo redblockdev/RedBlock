@@ -1,6 +1,6 @@
 ![](./share/pixmaps/banner_unleashed.png)
 
-RedBlock Core (NOT RELEASED< CHAIN PARAMS WILL BE CHANGED) LAUNCH 10.20.2023
+RedBlock Core (NOT RELEASED!! CHAIN PARAMS WILL BE CHANGED) LAUNCH 10.20.2023
 ===========================
 
 
