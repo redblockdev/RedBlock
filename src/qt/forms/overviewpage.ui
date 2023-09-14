@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>596</width>
-    <height>342</height>
+    <height>408</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -78,7 +78,7 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset>
+               <iconset resource="../bitcoin.qrc">
                 <normaloff>:/icons/warning</normaloff>
                 <disabledoff>:/icons/warning</disabledoff>:/icons/warning</iconset>
               </property>
@@ -399,35 +399,16 @@
        </item>
        <item>
         <widget class="QLabel" name="label">
-         <property name="maximumSize">
-          <size>
-           <width>165</width>
-           <height>165</height>
-          </size>
+         <property name="styleSheet">
+          <string notr="true">image: url(:/icons/bitcoin);</string>
          </property>
          <property name="text">
           <string/>
-         </property>
-         <property name="pixmap">
-          <pixmap>../res/icons/bitcoin.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
          </property>
         </widget>
-       </item>
-       <item>
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
        </item>
       </layout>
      </item>
@@ -474,7 +455,7 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset>
+               <iconset resource="../bitcoin.qrc">
                 <normaloff>:/icons/warning</normaloff>
                 <disabledoff>:/icons/warning</disabledoff>:/icons/warning</iconset>
               </property>
@@ -545,6 +526,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../bitcoin.qrc"/>
+ </resources>
  <connections/>
 </ui>
