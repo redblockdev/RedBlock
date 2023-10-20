@@ -1,6 +1,6 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2018 The Bitcoin Core developers
-// Copyright (c) 2018 The Raven Core developers
+// Copyright (c) 2023 The RedBlock Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -88,7 +88,7 @@ public:
 
         // The best chain should have at least this much work.
         //consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000010f4207fc56b");
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000012d012d012d");
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
@@ -102,7 +102,7 @@ public:
         pchMessageStart[1] = 0xb3;
         pchMessageStart[2] = 0xba;
         pchMessageStart[3] = 0xdf;
-        nDefaultPort = 6211;
+        nDefaultPort = 8211;
         nPruneAfterHeight = 100000;
 
         genesis = CreateGenesisBlock(1540053565, 10226705, 0x1d00ffff, 4, 50 * COIN);
@@ -121,7 +121,7 @@ public:
         vSeeds.emplace_back("dnsseed.redblockcoin.com"); // Supports x1, x5, x9, and xd
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,83);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,88);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,122);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
@@ -137,8 +137,8 @@ public:
 
         checkpointData = {
             {
-            //    { 1, uint256S("0x00000000230768841f81a8b14b3899ce6b38c0e0e9d8f3a60245cf79c8bc756a")},
-            //    { 175, uint256S("0x000000004571ee39c82eb143f15577808de9fbfd7f103e6f77d27c6855538aca")},
+                { 1, uint256S("0x0000000066dedae1196fe7427e950233afff2546f04ac8472037c5d19b3383e9")},
+                { 300, uint256S("0x00000000b1d71d9053d2fe28c649dad2437d6adfa4234962b7e784bd1cb82e49")},
             //    { 176, uint256S("0x000000001adcdf818192b26b9ae9a3506e864f6669ed28fa7e509e2258a0b68c")},
             //    { 250, uint256S("0x000000003790c7a9797e9c7d4c6791b9b5051c250e6d5e0b7745f483eb65c4a3")},
             //    { 1000, uint256S("0x0000000052707bd216d8c74f4ad773529d063b2f6bcae6f0f9a6dc120647a330")},
@@ -149,9 +149,9 @@ public:
 
         chainTxData = ChainTxData {
             // Data from rpc: getchaintxstats 4096
-            /* nTime    */ 1540053565,
-            /* nTxCount */ 0,
-            /* dTxRate  */ 0.00,
+            /* nTime    */ 1697739335,
+            /* nTxCount */ 302,
+            /* dTxRate  */ 0.004209462872537464,
         };
 
         /* disable fallback fee on mainnet */

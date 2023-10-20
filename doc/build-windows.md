@@ -85,7 +85,7 @@ This means you cannot use a directory that is located directly on the host Windo
 
 Acquire the source in the usual way:
 
-    git clone https://github.com/bitcoin/bitcoin.git
+    git clone https://github.com/redblockdev/RedBlock.git
 
 Once the source code is ready the build steps are below:
 
@@ -114,7 +114,7 @@ This means you cannot use a directory that located directly on the host Windows 
 
 Acquire the source in the usual way:
 
-    git clone https://github.com/bitcoin/bitcoin.git
+    git clone https://github.com/redblockdev/RedBlock.git
 
 Then build using:
 
