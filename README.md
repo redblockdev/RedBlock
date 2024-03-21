@@ -1,6 +1,5 @@
 ![](./share/pixmaps/banner_unleashed.png)
 
-RedBlock Core (NOT RELEASED!! CHAIN PARAMS WILL BE CHANGED) LAUNCH 10.20.2023
 ===========================
 
 
@@ -27,8 +26,6 @@ Its genesis block has a timestamp (`nTime`) of `1540053565`.
 - Block Reward: 0.01 REDB
 - Mining Algorithm: SHA3d
 
-
-OK, but seriously what is RedBlock?
 
 
 License
