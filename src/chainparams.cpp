@@ -1,6 +1,6 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2018 The Bitcoin Core developers
-// Copyright (c) 2023 The RedBlock Core developers
+// Copyright (c) 2024 The RedBlock Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -139,7 +139,7 @@ public:
             {
                 { 1, uint256S("0x0000000066dedae1196fe7427e950233afff2546f04ac8472037c5d19b3383e9")},
                 { 300, uint256S("0x00000000b1d71d9053d2fe28c649dad2437d6adfa4234962b7e784bd1cb82e49")},
-            //    { 176, uint256S("0x000000001adcdf818192b26b9ae9a3506e864f6669ed28fa7e509e2258a0b68c")},
+                { 239000, uint256S("0x000000000009cb97d6a1a21a9d2ec196236f4e2a426659210d7ba689e38a5026")},
             //    { 250, uint256S("0x000000003790c7a9797e9c7d4c6791b9b5051c250e6d5e0b7745f483eb65c4a3")},
             //    { 1000, uint256S("0x0000000052707bd216d8c74f4ad773529d063b2f6bcae6f0f9a6dc120647a330")},
             //    { 4000, uint256S("0x000000009697e163b20b9d5675d538f2f046972919f804e5c8130479ef6b19a3")},
@@ -149,9 +149,9 @@ public:
 
         chainTxData = ChainTxData {
             // Data from rpc: getchaintxstats 4096
-            /* nTime    */ 1697739335,
-            /* nTxCount */ 302,
-            /* dTxRate  */ 0.004209462872537464,
+            /* nTime    */ 1711041249,
+            /* nTxCount */ 286015,
+            /* dTxRate  */ 0.02145669730179162,
         };
 
         /* disable fallback fee on mainnet */
