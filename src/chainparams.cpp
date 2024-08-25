@@ -140,7 +140,7 @@ public:
                 { 1, uint256S("0x0000000066dedae1196fe7427e950233afff2546f04ac8472037c5d19b3383e9")},
                 { 300, uint256S("0x00000000b1d71d9053d2fe28c649dad2437d6adfa4234962b7e784bd1cb82e49")},
                 { 239000, uint256S("0x000000000009cb97d6a1a21a9d2ec196236f4e2a426659210d7ba689e38a5026")},
-            //    { 250, uint256S("0x000000003790c7a9797e9c7d4c6791b9b5051c250e6d5e0b7745f483eb65c4a3")},
+                { 463900, uint256S("0x00000000000879f15594a934ebb98706ab5f093bb67b02776f45e0e23405440c")},
             //    { 1000, uint256S("0x0000000052707bd216d8c74f4ad773529d063b2f6bcae6f0f9a6dc120647a330")},
             //    { 4000, uint256S("0x000000009697e163b20b9d5675d538f2f046972919f804e5c8130479ef6b19a3")},
             //    { 20418, uint256S("0x00000000000048fc1a336fa6c0fbf1c9dac5ea7b76c529438a7360b0da92d63b")},
@@ -149,9 +149,9 @@ public:
 
         chainTxData = ChainTxData {
             // Data from rpc: getchaintxstats 4096
-            /* nTime    */ 1711041249,
-            /* nTxCount */ 286015,
-            /* dTxRate  */ 0.02145669730179162,
+            /* nTime    */ 1724629837,
+            /* nTxCount */ 525921,
+            /* dTxRate  */ 0.01951237901559544,
         };
 
         /* disable fallback fee on mainnet */
